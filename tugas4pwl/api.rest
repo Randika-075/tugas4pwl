@@ -1,0 +1,56 @@
+@base_url = http://127.0.0.1:6543/api/v1
+
+@token = eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsInN1YiI6MSwiaWF0IjoxNzAzMjYwODk1LCJleHAiOjE3MDMyNjQ0OTV9.DtF-kCCVqynZCK77iJq69FwNs_wKHFpSPer183RwQf7mamrLMRFFnjDummXXA6FwtC2cGZoOCfp_qZ6ZSIBKzQ
+@tokenAdmin = eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOjIsImlhdCI6MTcwMzI2MTEyMCwiZXhwIjoxNzAzMjY0NzIwfQ.5goqN0pVT-YjV2vMd35BoW_He55n3gw1j6-7yfErREGVA7Zttt4KHb6q1dy5M7V9UTIYslfwZO4yZv5desNRAg
+
+###
+GET {{base_url}}/movie
+
+###
+GET {{base_url}}/movie/1
+
+###
+POST {{base_url}}/movie/create
+Authorization: Bearer {{tokenAdmin}}
+
+{
+    "title": "The Matrix",
+    "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+    "year": 1999,
+    "rating": 8,
+    "genre": "Action, Sci-Fi"
+}
+
+###
+PUT {{base_url}}/movie/update/4
+Authorization: Bearer {{tokenAdmin}}
+
+{
+    "title": "The Matri",
+    "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+    "year": 1999,
+    "rating": 8,
+    "genre": "Action, Sci-Fi"
+}
+
+###
+DELETE {{base_url}}/movie/delete/3
+Authorization: Bearer {{tokenAdmin}}
+
+
+###
+POST {{base_url}}/register
+
+{
+    "name": "nama",
+    "email": "nama@email.com",
+    "password": "123456"
+}
+
+###
+POST {{base_url}}/login
+
+{
+    "email": "admin@admin.com",
+    "password": "admin"
+}

@@ -1,0 +1,6 @@
+[console_scripts]
+initialize_tugas_4_ra_db = tugas_4_ra.scripts.initialize_db:main
+
+[paste.app_factory]
+main = tugas_4_ra:main
+

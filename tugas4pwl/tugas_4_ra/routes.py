@@ -1,0 +1,11 @@
+def includeme(config):
+    config.add_static_view("static", "static", cache_max_age=3600)
+    config.add_route("home", "/")
+    config.add_route("movie", "/api/v1/movie")
+    config.add_route("movie_create", "/api/v1/movie/create")
+    config.add_route("movie_detail", "/api/v1/movie/{id}")
+    config.add_route("movie_delete", "/api/v1/movie/delete/{id}")
+    config.add_route("movie_update", "/api/v1/movie/update/{id}")
+    config.add_route("login", "/api/v1/login")
+    config.add_route("logout", "/api/v1/logout")
+    config.add_route("register", "/api/v1/register")
